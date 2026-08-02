@@ -1,217 +1,260 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="vi" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mô-tôPro SaaS - Giải Pháp Quản Lý & Kinh Doanh Showroom Motor PKL</title>
     <link rel="stylesheet" href="./dist/output.css" />
   </head>
-  <body class="bg-surface text-ink font-body">
-    <!-- Nút bỏ qua đến nội dung chính hỗ trợ Accessibility -->
-    <a href="#main" class="sr-only focus:not-sr-only">Bỏ qua đến nội dung chính</a>
+  <body class="bg-surface text-ink font-body antialiased selection:bg-brand-600 selection:text-white">
+    <!-- Skip to main content -->
+    <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:p-4 focus:bg-brand-600 focus:text-white">Bỏ qua đến nội dung chính</a>
 
     <!-- 1. NAVBAR SECTION -->
-    <header>
-      <nav aria-label="Điều hướng chính">
-        <a href="#">
-          <img src="./assets/img/logo.svg" alt="Mô-tôPro SaaS Logo" />
+    <header class="sticky top-0 z-40 w-full border-b border-line bg-surface/80 backdrop-blur-md">
+      <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between" aria-label="Điều hướng chính">
+        <a href="#" class="flex items-center gap-2 font-display font-extrabold text-xl text-brand-600">
+          <span class="w-8 h-8 rounded-lg bg-brand-600 text-white flex items-center justify-center font-black">M</span>
           <span>Mô-tôPro</span>
         </a>
-        <ul>
-          <li><a href="#tinh-nang">Tính năng</a></li>
-          <li><a href="#so-lieu">Hiệu quả</a></li>
-          <li><a href="#cam-nhan">Khách hàng</a></li>
-          <li><a href="#bang-gia">Bảng giá</a></li>
-          <li><a href="#faq">Hỏi đáp</a></li>
+        <ul class="hidden md:flex items-center gap-8 font-medium text-sm text-muted">
+          <li><a href="#tinh-nang" class="hover:text-brand-600 transition-colors">Tính năng</a></li>
+          <li><a href="#so-lieu" class="hover:text-brand-600 transition-colors">Hiệu quả</a></li>
+          <li><a href="#cam-nhan" class="hover:text-brand-600 transition-colors">Khách hàng</a></li>
+          <li><a href="#bang-gia" class="hover:text-brand-600 transition-colors">Bảng giá</a></li>
+          <li><a href="#faq" class="hover:text-brand-600 transition-colors">Hỏi đáp</a></li>
         </ul>
-        <div>
-          <a href="#">Đăng nhập</a>
-          <a href="#bang-gia">Dùng thử miễn phí</a>
+        <div class="flex items-center gap-4 font-medium text-sm">
+          <a href="#" class="text-ink hover:text-brand-600 transition-colors">Đăng nhập</a>
+          <a href="#bang-gia" class="bg-brand-600 text-white px-4 py-2 rounded-card hover:bg-brand-600/90 transition-colors shadow-sm">Dùng thử miễn phí</a>
         </div>
       </nav>
     </header>
 
     <main id="main">
       <!-- 2. HERO SECTION -->
-      <section aria-labelledby="hero-title">
-        <div>
-          <h1 id="hero-title">Giải pháp quản lý và bứt phá doanh thu cho Showroom Motor PKL</h1>
-          <p>
-            Đơn giản hóa quy trình nhập xe, quản lý tồn kho theo số khung (VIN), tự động hóa hợp đồng và tối ưu hóa trải nghiệm chăm sóc khách hàng đam mê tốc độ.
-          </p>
-          <div>
-            <a href="#bang-gia">Đăng ký dùng thử 14 ngày</a>
-            <a href="#tinh-nang">Xem video demo</a>
+      <section aria-labelledby="hero-title" class="py-16 md:py-24 bg-gradient-to-b from-brand-600/5 to-transparent">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-12 items-center">
+          <div class="space-y-6">
+            <span class="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-brand-600/10 text-brand-600 border border-brand-600/20">🔥 Nền tảng SaaS #1 cho Showroom PKL</span>
+            <h1 id="hero-title" class="font-display text-4xl sm:text-5xl font-extrabold text-ink leading-tight">
+              Giải pháp quản lý & bứt phá doanh thu cho <span class="text-brand-600">Showroom Motor PKL</span>
+            </h1>
+            <p class="text-lg text-muted leading-relaxed">
+              Đơn giản hóa quy trình nhập xe, quản lý tồn kho theo số khung (VIN), tự động hóa hợp đồng và tối ưu hóa trải nghiệm chăm sóc khách hàng đam mê tốc độ.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 pt-2">
+              <a href="#bang-gia" class="inline-flex items-center justify-center bg-brand-600 text-white px-6 py-3 rounded-card font-medium shadow-lg shadow-brand-600/20 hover:bg-brand-600/90 transition-all">Đăng ký dùng thử 14 ngày</a>
+              <a href="#tinh-nang" class="inline-flex items-center justify-center bg-surface border border-line text-ink px-6 py-3 rounded-card font-medium hover:bg-slate-50 transition-colors">Xem video demo</a>
+            </div>
           </div>
-        </div>
-        <div>
-          <img src="./assets/img/hero-dashboard.jpg" alt="Giao diện bảng điều khiển quản lý showroom Motor PKL" />
+          <div class="relative">
+            <div class="w-full h-80 sm:h-96 rounded-2xl bg-gradient-to-tr from-brand-600 to-accent-500 p-1 shadow-2xl">
+              <div class="w-full h-full bg-slate-900 rounded-[14px] flex flex-col justify-center items-center text-white p-6 text-center">
+                <div class="w-16 h-16 rounded-full bg-brand-600/20 flex items-center justify-center text-3xl mb-4">🏍️</div>
+                <h3 class="font-bold text-xl mb-2">Bảng Điều Khiển Showroom</h3>
+                <p class="text-slate-400 text-sm max-w-xs">Giao diện quản lý thời gian thực cho kho xe Ducati, Kawasaki, BMW Motorrad...</p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
       <!-- 3. LOGO KHÁCH HÀNG (PARTNERS) -->
-      <section aria-labelledby="partners-title">
-        <h2 id="partners-title">Được tin dùng bởi hơn 150+ Showroom Motor PKL trên toàn quốc</h2>
-        <ul>
-          <li><img src="./assets/img/brand-1.svg" alt="Showroom Ducati Ha Noi" /></li>
-          <li><img src="./assets/img/brand-2.svg" alt="Kawasaki Max Motor" /></li>
-          <li><img src="./assets/img/brand-3.svg" alt="BMW Motorrad Saigon" /></li>
-          <li><img src="./assets/img/brand-4.svg" alt="Harley-Davidson Vietnam" /></li>
-        </ul>
+      <section aria-labelledby="partners-title" class="py-10 border-y border-line bg-surface">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
+          <h2 id="partners-title" class="text-sm font-semibold uppercase tracking-wider text-muted">Được tin dùng bởi hơn 150+ Showroom Motor PKL trên toàn quốc</h2>
+          <ul class="flex flex-wrap items-center justify-center gap-8 md:gap-16 opacity-70 font-bold text-lg text-muted">
+            <li class="hover:text-brand-600 transition-colors">DUCATI HÀ NỘI</li>
+            <li class="hover:text-brand-600 transition-colors">KAWASAKI MAX MOTOR</li>
+            <li class="hover:text-brand-600 transition-colors">BMW MOTORRAD SAIGON</li>
+            <li class="hover:text-brand-600 transition-colors">HARLEY-DAVIDSON VN</li>
+          </ul>
+        </div>
       </section>
 
       <!-- 4. TÍNH NĂNG CHÍNH (FEATURES) -->
-      <section id="tinh-nang" aria-labelledby="tinh-nang-title">
-        <h2 id="tinh-nang-title">Tính năng chuyên biệt cho kinh doanh Xe Phân Khối Lớn</h2>
-        <p>Mọi công cụ bạn cần để vận hành showroom mượt mà và chuyên nghiệp.</p>
-        <ul>
-          <li>
-            <h3>Quản lý kho xe theo số khung (VIN)</h3>
-            <p>Theo dõi chính xác vị trí, tình trạng xe, lịch sử bảo dưỡng và giấy tờ hải quan của từng chiếc xe PKL.</p>
-          </li>
-          <li>
-            <h3>Tự động hóa hợp đồng & Trả góp</h3>
-            <p>Tạo hợp đồng mua bán, tính toán biểu phí trả góp và thủ tục đăng ký biển số chỉ trong 3 phút.</p>
-          </li>
-          <li>
-            <h3>Quản lý phụ tùng & Lịch bảo dưỡng</h3>
-            <p>Nhắc lịch bảo dưỡng định kỳ tự động qua Zalo/SMS cho chủ xe và quản lý tồn kho đồ độ, phụ tùng chính hãng.</p>
-          </li>
-        </ul>
+      <section id="tinh-nang" aria-labelledby="tinh-nang-title" class="py-20 bg-slate-50/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+          <div class="text-center max-w-2xl mx-auto space-y-4">
+            <h2 id="tinh-nang-title" class="font-display text-3xl font-bold text-ink">Tính năng chuyên biệt cho Xe Phân Khối Lớn</h2>
+            <p class="text-muted">Mọi công cụ bạn cần để vận hành showroom mượt mà và chuyên nghiệp.</p>
+          </div>
+          <ul class="grid md:grid-cols-3 gap-8">
+            <li class="bg-surface p-8 rounded-2xl border border-line shadow-sm space-y-4 hover:shadow-md transition-shadow">
+              <div class="w-12 h-12 rounded-xl bg-brand-600/10 text-brand-600 flex items-center justify-center font-bold text-xl">🔍</div>
+              <h3 class="font-bold text-xl text-ink">Quản lý kho xe theo số khung (VIN)</h3>
+              <p class="text-muted text-sm leading-relaxed">Theo dõi chính xác vị trí, tình trạng xe, lịch sử bảo dưỡng và giấy tờ hải quan của từng chiếc xe PKL.</p>
+            </li>
+            <li class="bg-surface p-8 rounded-2xl border border-line shadow-sm space-y-4 hover:shadow-md transition-shadow">
+              <div class="w-12 h-12 rounded-xl bg-brand-600/10 text-brand-600 flex items-center justify-center font-bold text-xl">📄</div>
+              <h3 class="font-bold text-xl text-ink">Tự động hóa hợp đồng & Trả góp</h3>
+              <p class="text-muted text-sm leading-relaxed">Tạo hợp đồng mua bán, tính toán biểu phí trả góp và thủ tục đăng ký biển số chỉ trong 3 phút.</p>
+            </li>
+            <li class="bg-surface p-8 rounded-2xl border border-line shadow-sm space-y-4 hover:shadow-md transition-shadow">
+              <div class="w-12 h-12 rounded-xl bg-brand-600/10 text-brand-600 flex items-center justify-center font-bold text-xl">🔧</div>
+              <h3 class="font-bold text-xl text-ink">Quản lý phụ tùng & Bảo dưỡng</h3>
+              <p class="text-muted text-sm leading-relaxed">Nhắc lịch bảo dưỡng định kỳ tự động qua Zalo/SMS cho chủ xe và quản lý tồn kho đồ độ chính hãng.</p>
+            </li>
+          </ul>
+        </div>
       </section>
 
       <!-- 5. SỐ LIỆU ẤN TƯỢNG (STATISTICS) -->
-      <section id="so-lieu" aria-labelledby="so-lieu-title">
-        <h2 id="so-lieu-title">Con số chứng minh hiệu quả vận hành</h2>
-        <ul>
-          <li>
-            <p>45%</p>
-
-            <p>Tăng doanh số bán xe trung bình sau 3 tháng sử dụng</p>
-          </li>
-          <li>
-            <p>10 phút</p>
-            <p>Thời gian hoàn tất thủ tục bàn giao xe cho khách hàng</p>
-          </li>
-          <li>
-            <p>99%</p>
-            <p>Khách hàng hài lòng với dịch vụ nhắc lịch bảo dưỡng tự động</p>
-          </li>
-        </ul>
+      <section id="so-lieu" aria-labelledby="so-lieu-title" class="py-16 bg-brand-600 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+          <h2 id="so-lieu-title" class="text-center font-display text-2xl font-bold opacity-90">Con số chứng minh hiệu quả vận hành</h2>
+          <ul class="grid md:grid-cols-3 gap-8 text-center">
+            <li class="space-y-2">
+              <p class="text-5xl font-extrabold font-display">45%</p>
+              <p class="text-white/80 text-sm">Tăng doanh số bán xe trung bình sau 3 tháng sử dụng</p>
+            </li>
+            <li class="space-y-2">
+              <p class="text-5xl font-extrabold font-display">10 phút</p>
+              <p class="text-white/80 text-sm">Thời gian hoàn tất thủ tục bàn giao xe cho khách hàng</p>
+            </li>
+            <li class="space-y-2">
+              <p class="text-5xl font-extrabold font-display">99%</p>
+              <p class="text-white/80 text-sm">Khách hàng hài lòng với dịch vụ nhắc lịch bảo dưỡng tự động</p>
+            </li>
+          </ul>
+        </div>
       </section>
 
       <!-- 6. CẢM NHẬN KHÁCH HÀNG (TESTIMONIALS) -->
-      <section id="cam-nhan" aria-labelledby="cam-nhan-title">
-        <h2 id="cam-nhan-title">Chủ Showroom nói gì về Mô-tôPro?</h2>
-        <blockquote>
-          <p>
-            "Từ khi dùng Mô-tôPro, việc quản lý 50 chiếc PKL trong kho không còn là nỗi ác mộng. Tìm lịch sử xe hay làm thủ tục trả góp cho khách cực kỳ nhanh!"
-          </p>
-          <footer>
-            <cite>— Nguyễn Văn Hùng, CEO Hùng Motor PKL Sài Gòn</cite>
-          </footer>
-        </blockquote>
+      <section id="cam-nhan" aria-labelledby="cam-nhan-title" class="py-20 bg-surface">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-8">
+          <h2 id="cam-nhan-title" class="font-display text-3xl font-bold text-ink">Chủ Showroom nói gì về Mô-tôPro?</h2>
+          <blockquote class="space-y-6 bg-slate-50 p-8 rounded-2xl border border-line">
+            <p class="text-xl text-ink italic leading-relaxed">
+              "Từ khi dùng Mô-tôPro, việc quản lý 50 chiếc PKL trong kho không còn là nỗi ác mộng. Tìm lịch sử xe hay làm thủ tục trả góp cho khách cực kỳ nhanh!"
+            </p>
+            <footer>
+              <cite class="not-italic font-bold text-brand-600 block">— Nguyễn Văn Hùng, CEO Hùng Motor PKL Sài Gòn</cite>
+            </footer>
+          </blockquote>
+        </div>
       </section>
 
       <!-- 7. BẢNG GIÁ DỊCH VỤ (PRICING) -->
-      <section id="bang-gia" aria-labelledby="bang-gia-title">
-        <h2 id="bang-gia-title">Bảng giá linh hoạt theo quy mô Showroom</h2>
-        <p>Không phí khởi tạo, nâng cấp hoặc hủy gói bất kỳ lúc nào.</p>
-        <ul>
-          <li>
-            <h3>Gói Khởi Nghiệp</h3>
-            <p>Dành cho cửa hàng kinh doanh dưới 10 xe PKL.</p>
-            <p>499.000đ <span>/tháng</span></p>
-            <ul>
-              <li>Quản lý tối đa 15 xe</li>
-              <li>Tạo hợp đồng mua bán cơ bản</li>
-              <li>Hỗ trợ qua Email</li>
-            </ul>
-            <a href="#">Bắt đầu dùng thử</a>
-          </li>
-          <li>
-            <h3>Gói Chuyên Nghiệp</h3>
-            <p>Dành cho Showroom quy mô trung bình (10 - 30 xe).</p>
-            <p>1.299.000đ <span>/tháng</span></p>
-            <ul>
-              <li>Quản lý không giới hạn xe</li>
-              <li>Tích hợp nhắc bảo dưỡng qua Zalo</li>
-              <li>Quản lý kho phụ tùng & đồ độ</li>
-              <li>Hỗ trợ ưu tiên 24/7</li>
-            </ul>
-            <a href="#">Dùng thử 14 ngày</a>
-          </li>
-          <li>
-            <h3>Gói Chuỗi Showroom</h3>
-            <p>Dành cho hệ thống nhiều chi nhánh trên toàn quốc.</p>
-
-            <p>Liên hệ <span>/báo giá</span></p>
-            <ul>
-              <li>Quản lý đa chi nhánh tập trung</li>
-              <li>Tùy chỉnh tính năng theo yêu cầu</li>
-              <li>Chuyên viên hỗ trợ riêng tại showroom</li>
-            </ul>
-            <a href="#">Tư vấn giải pháp</a>
-          </li>
-        </ul>
+      <section id="bang-gia" aria-labelledby="bang-gia-title" class="py-20 bg-slate-50/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+          <div class="text-center max-w-2xl mx-auto space-y-4">
+            <h2 id="bang-gia-title" class="font-display text-3xl font-bold text-ink">Bảng giá linh hoạt theo quy mô Showroom</h2>
+            <p class="text-muted">Không phí khởi tạo, nâng cấp hoặc hủy gói bất kỳ lúc nào.</p>
+          </div>
+          <ul class="grid md:grid-cols-3 gap-8">
+            <li class="bg-surface p-8 rounded-2xl border border-line space-y-6 flex flex-col justify-between">
+              <div class="space-y-4">
+                <h3 class="font-bold text-xl text-ink">Gói Khởi Nghiệp</h3>
+                <p class="text-muted text-sm">Dành cho cửa hàng kinh doanh dưới 10 xe PKL.</p>
+                <p class="text-3xl font-extrabold text-ink">499.000đ <span class="text-sm font-normal text-muted">/tháng</span></p>
+                <ul class="space-y-2 text-sm text-muted pt-4 border-t border-line">
+                  <li>✓ Quản lý tối đa 15 xe</li>
+                  <li>✓ Tạo hợp đồng mua bán cơ bản</li>
+                  <li>✓ Hỗ trợ qua Email</li>
+                </ul>
+              </div>
+              <a href="#" class="block text-center bg-surface border border-brand-600 text-brand-600 py-3 rounded-card font-medium hover:bg-brand-600/5 transition-colors">Bắt đầu dùng thử</a>
+            </li>
+            <li class="bg-surface p-8 rounded-2xl border-2 border-brand-600 shadow-xl space-y-6 flex flex-col justify-between relative">
+              <span class="absolute -top-3 right-6 bg-brand-600 text-white text-xs font-bold px-3 py-1 rounded-full">Phổ biến nhất</span>
+              <div class="space-y-4">
+                <h3 class="font-bold text-xl text-ink">Gói Chuyên Nghiệp</h3>
+                <p class="text-muted text-sm">Dành cho Showroom quy mô trung bình (10 - 30 xe).</p>
+                <p class="text-3xl font-extrabold text-brand-600">1.299.000đ <span class="text-sm font-normal text-muted">/tháng</span></p>
+                <ul class="space-y-2 text-sm text-muted pt-4 border-t border-line">
+                  <li>✓ Quản lý không giới hạn xe</li>
+                  <li>✓ Tích hợp nhắc bảo dưỡng qua Zalo</li>
+                  <li>✓ Quản lý kho phụ tùng & đồ độ</li>
+                  <li>✓ Hỗ trợ ưu tiên 24/7</li>
+                </ul>
+              </div>
+              <a href="#" class="block text-center bg-brand-600 text-white py-3 rounded-card font-medium hover:bg-brand-600/90 transition-colors shadow-md">Dùng thử 14 ngày</a>
+            </li>
+            <li class="bg-surface p-8 rounded-2xl border border-line space-y-6 flex flex-col justify-between">
+              <div class="space-y-4">
+                <h3 class="font-bold text-xl text-ink">Gói Chuỗi Showroom</h3>
+                <p class="text-muted text-sm">Dành cho hệ thống nhiều chi nhánh trên toàn quốc.</p>
+                <p class="text-3xl font-extrabold text-ink">Liên hệ <span class="text-sm font-normal text-muted">/báo giá</span></p>
+                <ul class="space-y-2 text-sm text-muted pt-4 border-t border-line">
+                  <li>✓ Quản lý đa chi nhánh tập trung</li>
+                  <li>✓ Tùy chỉnh tính năng theo yêu cầu</li>
+                  <li>✓ Chuyên viên hỗ trợ riêng tại showroom</li>
+                </ul>
+              </div>
+              <a href="#" class="block text-center bg-surface border border-line text-ink py-3 rounded-card font-medium hover:bg-slate-50 transition-colors">Tư vấn giải pháp</a>
+            </li>
+          </ul>
+        </div>
       </section>
 
       <!-- 8. CÂU HỎI THƯỜNG GẶP (FAQ) -->
-      <section id="faq" aria-labelledby="faq-title">
-        <h2 id="faq-title">Những câu hỏi thường gặp</h2>
-        <ul>
-          <li>
-            <h3>Tôi có được dùng thử phần mềm miễn phí không?</h3>
-            <p>Có, bạn được trải nghiệm đầy đủ tính năng trong 14 ngày mà không cần nhập thẻ ngân hàng.</p>
-          </li>
-          <li>
-            <h3>Phần mềm có hỗ trợ in hợp đồng mua bán xe không?</h3>
-            <p>Có, hệ thống tự động điền thông tin khách hàng và số khung/số máy vào mẫu hợp đồng chuẩn pháp lý chỉ với 1 click.</p>
-          </li>
-          <li>
-            <h3>Dữ liệu khách hàng của Showroom có được bảo mật không?</h3>
-            <p>Toàn bộ dữ liệu được mã hóa chuẩn ngân hàng và sao lưu hàng ngày trên điện toán đám mây Cloud.</p>
-          </li>
-        </ul>
+      <section id="faq" aria-labelledby="faq-title" class="py-20 bg-surface">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+          <div class="text-center space-y-4">
+            <h2 id="faq-title" class="font-display text-3xl font-bold text-ink">Những câu hỏi thường gặp</h2>
+          </div>
+          <ul class="space-y-6">
+            <li class="bg-slate-50 p-6 rounded-xl border border-line space-y-2">
+              <h3 class="font-bold text-lg text-ink">Tôi có được dùng thử phần mềm miễn phí không?</h3>
+              <p class="text-muted text-sm leading-relaxed">Có, bạn được trải nghiệm đầy đủ tính năng trong 14 ngày mà không cần nhập thẻ ngân hàng.</p>
+            </li>
+            <li class="bg-slate-50 p-6 rounded-xl border border-line space-y-2">
+              <h3 class="font-bold text-lg text-ink">Phần mềm có hỗ trợ in hợp đồng mua bán xe không?</h3>
+              <p class="text-muted text-sm leading-relaxed">Có, hệ thống tự động điền thông tin khách hàng và số khung/số máy vào mẫu hợp đồng chuẩn pháp lý chỉ với 1 click.</p>
+            </li>
+            <li class="bg-slate-50 p-6 rounded-xl border border-line space-y-2">
+              <h3 class="font-bold text-lg text-ink">Dữ liệu khách hàng của Showroom có được bảo mật không?</h3>
+              <p class="text-muted text-sm leading-relaxed">Toàn bộ dữ liệu được mã hóa chuẩn ngân hàng và sao lưu hàng ngày trên điện toán đám mây Cloud.</p>
+            </li>
+          </ul>
+        </div>
       </section>
 
       <!-- 9. KÊU GỌI HÀNH ĐỘNG (CTA) -->
-      <section aria-labelledby="cta-title">
-        <h2 id="cta-title">Sẵn sàng chuẩn hóa quy trình Showroom của bạn?</h2>
-        <p>Cài đặt chỉ mất 10 phút. Bắt đầu tối ưu vận hành và gia tăng doanh số ngay hôm nay.</p>
-        <a href="#bang-gia">Trải nghiệm miễn phí ngay</a>
+      <section aria-labelledby="cta-title" class="py-16 bg-gradient-to-br from-brand-600 to-accent-500 text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
+          <h2 id="cta-title" class="font-display text-3xl sm:text-4xl font-extrabold">Sẵn sàng chuẩn hóa quy trình Showroom của bạn?</h2>
+          <p class="text-white/90 text-lg">Cài đặt chỉ mất 10 phút. Bắt đầu tối ưu vận hành và gia tăng doanh số ngay hôm nay.</p>
+          <div>
+            <a href="#bang-gia" class="inline-block bg-white text-brand-600 px-8 py-3 rounded-card font-bold shadow-xl hover:bg-slate-100 transition-colors">Trải nghiệm miễn phí ngay</a>
+          </div>
+        </div>
       </section>
     </main>
 
     <!-- 10. FOOTER SECTION -->
-    <footer>
-      <div>
-        <div>
-          <a href="#">
-            <img src="./assets/img/logo.svg" alt="Mô-tôPro SaaS Logo" />
-            <span>Mô-tôPro</span>
-          </a>
-          <p>Giải pháp phần mềm SaaS hàng đầu cho ngành kinh doanh Môtô Phân Khối Lớn tại Việt Nam.</p>
+    <footer class="bg-slate-900 text-slate-400 py-12 border-t border-slate-800">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+        <div class="grid md:grid-cols-4 gap-8">
+          <div class="space-y-4 md:col-span-2">
+            <a href="#" class="flex items-center gap-2 font-display font-extrabold text-xl text-white">
+              <span class="w-8 h-8 rounded-lg bg-brand-600 text-white flex items-center justify-center font-black">M</span>
+              <span>Mô-tôPro</span>
+            </a>
+            <p class="text-sm max-w-sm">Giải pháp phần mềm SaaS hàng đầu cho ngành kinh doanh Môtô Phân Khối Lớn tại Việt Nam.</p>
+          </div>
+          <div class="space-y-3">
+            <h3 class="text-white font-bold text-sm">Giải pháp</h3>
+            <ul class="space-y-2 text-sm">
+              <li><a href="#" class="hover:text-white transition-colors">Quản lý kho xe</a></li>
+              <li><a href="#" class="hover:text-white transition-colors">Tự động hợp đồng</a></li>
+              <li><a href="#" class="hover:text-white transition-colors">Chăm sóc khách hàng</a></li>
+            </ul>
+          </div>
+          <div class="space-y-3">
+            <h3 class="text-white font-bold text-sm">Hỗ trợ</h3>
+            <ul class="space-y-2 text-sm">
+              <li><a href="#" class="hover:text-white transition-colors">Tài liệu hướng dẫn</a></li>
+              <li><a href="#" class="hover:text-white transition-colors">Chính sách bảo mật</a></li>
+              <li><a href="#" class="hover:text-white transition-colors">Liên hệ tổng đài</a></li>
+            </ul>
+          </div>
         </div>
-        <div>
-          <h3>Giải pháp</h3>
-          <ul>
-            <li><a href="#">Quản lý kho xe</a></li>
-            <li><a href="#">Tự động hợp đồng</a></li>
-            <li><a href="#">Chăm sóc khách hàng</a></li>
-          </ul>
+        <div class="pt-8 border-t border-slate-800 text-xs text-center">
+          <p>© 2026 Mô-tôPro SaaS. Tất cả quyền được bảo lưu. Phát triển bởi Nguyễn Lâm Nhựt Nam (2551050146).</p>
         </div>
-        <div>
-          <h3>Hỗ trợ</h3>
-          <ul>
-            <li><a href="#">Tài liệu hướng dẫn</a></li>
-            <li><a href="#">Chính sách bảo mật</a></li>
-            <li><a href="#">Liên hệ tổng đài</a></li>
-          </ul>
-        </div>
-      </div>
-      <div>
-        <p>© 2026 Mô-tôPro SaaS. Tất cả quyền được bảo lưu. Phát triển bởi Nguyễn Lâm Nhựt Nam (2551050146).</p>
       </div>
     </footer>
   </body>
