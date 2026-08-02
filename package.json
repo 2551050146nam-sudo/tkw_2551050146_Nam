@@ -1,0 +1,25 @@
+{
+  "name": "tkw_2551050146_nam",
+  "version": "1.0.0",
+  "description": "Hello AE 86 BINH THUAN\r  If you enjoy the extension, 5-star rating would mean a lot:) <img src=\"chrome/imgs/stars5.jpeg\" alt=\"5 Stars\" height=\"16\">",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tailwindcss -i ./src/input.css -o ./tkw_2551050146_Nam-main/dist/output.css --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/2551050146nam-sudo/tkw_2551050146_Nam.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/2551050146nam-sudo/tkw_2551050146_Nam/issues"
+  },
+  "homepage": "https://github.com/2551050146nam-sudo/tkw_2551050146_Nam#readme",
+  "dependencies": {
+    "@tailwindcss/cli": "^4.3.3",
+    "tailwindcss": "^4.3.3"
+  }
+}
