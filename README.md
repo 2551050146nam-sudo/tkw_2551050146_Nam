@@ -135,7 +135,7 @@ npm run dev
 
 ### 📤 Đẩy file cập nhật lên GitHub:
 
-Nam dán đè vào `README.md`, nhấn **`Ctrl + S`** rồi gõ 3 dòng lệnh quen thuộc này dưới Terminal:
+Dán đè vào `README.md`, nhấn **`Ctrl + S`** rồi gõ 3 dòng lệnh quen thuộc này dưới Terminal:
 
 ```bash
 git add README.md
