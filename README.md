@@ -36,16 +36,16 @@ Kiểm tra nhanh xem đã chạy đúng chưa: mở `src/input.css`, đổi `--c
 ---
 
 ## 3. Cấu trúc thư mục
-index.html          Trang chính[cite: 2]
-src/input.css       Design token + component[cite: 2]
-dist/output.css     File Tailwind build ra[cite: 2]
-js/                 Thư mục JS (Buổi 4)[cite: 2]
-data/records.json   Dữ liệu mẫu (Buổi 5)[cite: 2]
-assets/             Ảnh và Icon SVG[cite: 2]
+index.html          Trang chính
+src/input.css       Design token + component
+dist/output.css     File Tailwind build ra
+js/                 Thư mục JS (Buổi 4)
+data/records.json   Dữ liệu mẫu (Buổi 5)
+assets/             Ảnh và Icon SVG
 
 ---
 
-## 4. Tiến độ hoàn thành
+4. Tiến độ hoàn thành
+[x] Buổi 1: Trích xuất Design Tokens, dựng khung HTML Semantic 10 section, style Navbar & Hero (tag: buoi-1)
 
-- [x] **Buổi 1:** Trích xuất Design Tokens, dựng khung HTML Semantic 10 section, style Navbar & Hero (`tag: buoi-1`)[cite: 4]
-- [x] **Buổi 2:** Hệ thống Layout với Flexbox & Grid cho toàn bộ 10 section, responsive 1280px (`tag: buoi-2`)[cite: 5]
+[x] Buổi 2: Hệ thống Layout với Flexbox & Grid cho toàn bộ 10 section, responsive 1280px (tag: buoi-2)
