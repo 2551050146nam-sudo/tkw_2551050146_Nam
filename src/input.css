@@ -3,15 +3,48 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
-  --color-brand-600: #1A56DB;
-  --color-accent-500: #7E22CE;
-  --color-ink: #111827;
-  --color-muted: #6B7280;
-  --color-surface: #FFFFFF;
-  --color-line: #E5E7EB;
+  --color-brand-50: #eff6ff;
+  --color-brand-600: #1d4ed8;
+  --color-brand-700: #1e40af;
+  
+  --color-accent-500: #eab308;
+  
+  --color-ink: #0f172a;
+  --color-muted: #64748b;
+  --color-surface: #ffffff;
+  --color-surface-alt: #f8fafc;
+  --color-line: #e2e8f0;
 
-  --font-display: "Inter", system-ui, sans-serif;
+  --font-display: "Be Vietnam Pro", system-ui, sans-serif;
   --font-body: "Inter", system-ui, sans-serif;
 
-  --radius-card: 0.5rem;
+  --radius-card: 0.875rem;
+  --radius-pill: 9999px;
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-pill px-5 py-2.5 text-sm font-semibold transition-colors;
+  }
+  .btn-primary {
+    @apply bg-brand-600 text-white hover:bg-brand-700;
+  }
+  .btn-ghost {
+    @apply bg-transparent text-ink hover:bg-surface-alt;
+  }
+  .btn-lg {
+    @apply px-6 py-3 text-base;
+  }
+  .card {
+    @apply rounded-card border border-line bg-surface p-6 shadow-sm;
+  }
+  .eyebrow {
+    @apply text-xs font-bold uppercase tracking-wider text-brand-600;
+  }
+  .badge {
+    @apply inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-semibold;
+  }
+  .ticket {
+    @apply relative rounded-card border border-line bg-surface p-6 shadow-md;
+  }
 }
