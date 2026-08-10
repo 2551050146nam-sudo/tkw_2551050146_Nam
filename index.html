@@ -3,358 +3,102 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
   <title>Mô-tôPro — Phần mềm quản lý Showroom Motor PKL</title>
   <meta name="description" content="Mô-tôPro giúp chủ showroom quản lý kho xe theo mã VIN, lập hợp đồng mua bán và theo dõi lịch bảo dưỡng." />
-
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
-
   <link rel="stylesheet" href="./dist/output.css" />
 </head>
+<body class="bg-surface text-ink font-body antialiased dark:bg-surface-dark dark:text-ink-dark transition-colors">
 
-<body class="bg-surface text-ink font-body antialiased">
+  <a href="#main" class="btn btn-primary sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50">Bỏ qua đến nội dung chính</a>
 
-  <a href="#main"
-     class="btn btn-primary sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50">
-    Bỏ qua đến nội dung chính
-  </a>
-
-  <!-- NAVBAR -->
-  <header class="sticky top-0 z-40 border-b border-line bg-surface/85 backdrop-blur">
+  <header class="sticky top-0 z-40 border-b border-line bg-surface/85 backdrop-blur dark:border-line-dark dark:bg-surface-dark/85">
     <nav class="mx-auto flex max-w-6xl items-center justify-between px-5 py-4" aria-label="Điều hướng chính">
       <a href="./index.html" class="flex items-center gap-2.5">
         <span class="grid h-9 w-9 place-items-center rounded-lg bg-brand-600 font-display text-lg font-extrabold text-white">M</span>
         <span class="font-display text-xl font-extrabold">Mô-tôPro</span>
       </a>
-
       <ul class="hidden items-center gap-8 text-sm font-medium lg:flex">
-        <li><a href="#tinh-nang" class="hover:text-brand-600">Tính năng</a></li>
-        <li><a href="#cach-hoat-dong" class="hover:text-brand-600">Cách hoạt động</a></li>
-        <li><a href="#bang-gia" class="hover:text-brand-600">Bảng giá</a></li>
-        <li><a href="#cau-hoi" class="hover:text-brand-600">Câu hỏi</a></li>
+        <li><a href="./index.html#tinh-nang" class="hover:text-brand-600 dark:hover:text-blue-400">Tính năng</a></li>
+        <li><a href="./pricing.html" class="hover:text-brand-600 dark:hover:text-blue-400">Bảng giá & So sánh</a></li>
+        <li><a href="./contact.html" class="hover:text-brand-600 dark:hover:text-blue-400">Liên hệ</a></li>
       </ul>
-
       <div class="flex items-center gap-2">
-        <a href="#cta" class="btn btn-primary hidden lg:inline-flex">Dùng thử 14 ngày</a>
-        <button type="button" class="grid h-10 w-10 place-items-center rounded-pill border border-line lg:hidden" aria-expanded="false" aria-controls="nav-mobile" aria-label="Mở menu">
-          <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
-            <path d="M4 7h16M4 12h16M4 17h16" />
-          </svg>
+        <a href="./contact.html" class="btn btn-primary hidden lg:inline-flex">Dùng thử 14 ngày</a>
+        <button type="button" class="grid h-10 w-10 place-items-center rounded-pill border border-line lg:hidden dark:border-line-dark" aria-expanded="false" aria-label="Mở menu">
+          <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" /></svg>
         </button>
       </div>
     </nav>
   </header>
 
   <main id="main">
-    <!-- HERO SECTION -->
-    <section class="mx-auto max-w-6xl px-5 py-16 lg:py-24 grid items-center gap-14 lg:grid-cols-2 lg:gap-16" aria-labelledby="hero-title">
+    <!-- HERO SECTION Mobile-first -->
+    <section class="section grid items-center gap-10 lg:grid-cols-2 lg:gap-16" aria-labelledby="hero-title">
       <div>
         <p class="eyebrow">Giải pháp SaaS cho Showroom PKL</p>
-        <h1 id="hero-title" class="mt-4 font-display text-4xl font-extrabold leading-[1.1] sm:text-5xl lg:text-6xl">
-          Quản kho chính xác.<br />
-          Chốt xe trong 5 phút.
-        </h1>
-        <p class="mt-6 max-w-lg text-lg text-muted">
-          Mô-tôPro thay thế sổ sách thủ công bằng hệ thống quản lý số khung VIN trên điện thoại. Kiểm soát tồn kho, lập hợp đồng trả góp và theo dõi bảo dưỡng tự động.
-        </p>
-        <div class="mt-8 flex flex-wrap gap-3">
-          <a href="#cta" class="btn btn-primary btn-lg">Dùng thử 14 ngày</a>
-          <a href="#cach-hoat-dong" class="btn btn-ghost btn-lg">Xem cách hoạt động</a>
+        <h1 id="hero-title" class="mt-4 font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight">Quản kho chính xác.<br />Chốt xe trong 5 phút.</h1>
+        <p class="mt-4 text-base sm:text-lg text-muted dark:text-muted-dark">Mô-tôPro thay thế sổ sách thủ công bằng hệ thống quản lý số khung VIN trên điện thoại. Kiểm soát tồn kho, lập hợp đồng trả góp tự động.</p>
+        <div class="mt-6 flex flex-wrap gap-3">
+          <a href="./contact.html" class="btn btn-primary btn-lg w-full sm:w-auto">Dùng thử 14 ngày</a>
+          <a href="./pricing.html" class="btn btn-ghost btn-lg w-full sm:w-auto">Xem bảng giá</a>
         </div>
       </div>
-
-      <!-- Khối đặc trưng Ticket PKL -->
       <div class="ticket mx-auto w-full max-w-sm">
         <div class="flex items-start justify-between">
-          <div>
-            <p class="text-xs font-semibold uppercase tracking-widest text-muted">Phiếu đặt cọc xe</p>
-            <p class="font-display text-lg font-bold">HD-2026-889</p>
-          </div>
-          <span class="badge bg-brand-50 text-brand-700">Đã cọc</span>
+          <div><p class="text-xs font-semibold uppercase tracking-widest text-muted dark:text-muted-dark">Phiếu đặt cọc xe</p><p class="font-display text-lg font-bold">HD-2026-889</p></div>
+          <span class="badge bg-brand-50 text-brand-700 dark:bg-blue-950 dark:text-blue-300">Đã cọc</span>
         </div>
-        <dl class="mt-6 space-y-3 border-t border-dashed border-line pt-5 text-sm">
-          <div class="flex justify-between">
-            <dt class="text-muted">Khách hàng</dt>
-            <dd class="font-medium">Anh Anh Tuấn</dd>
-          </div>
-          <div class="flex justify-between">
-            <dt class="text-muted">Mẫu xe / Mã VIN</dt>
-            <dd class="font-medium">Ducati Panigale V4 S</dd>
-          </div>
-          <div class="flex justify-between">
-            <dt class="text-muted">Giá niêm yết</dt>
-            <dd class="font-medium">989.000.000 ₫</dd>
-          </div>
+        <dl class="mt-6 space-y-3 border-t border-dashed border-line dark:border-line-dark pt-5 text-sm">
+          <div class="flex justify-between"><dt class="text-muted dark:text-muted-dark">Khách hàng</dt><dd class="font-medium">Anh Tuấn</dd></div>
+          <div class="flex justify-between"><dt class="text-muted dark:text-muted-dark">Mẫu xe / VIN</dt><dd class="font-medium">Ducati Panigale V4 S</dd></div>
         </dl>
-        <div class="mt-5 flex items-end justify-between border-t border-dashed border-line pt-5">
-          <span class="text-sm text-muted">Tiền đặt cọc</span>
-          <span class="font-display text-2xl font-extrabold text-brand-600">100.000.000 ₫</span>
+        <div class="mt-5 flex items-end justify-between border-t border-dashed border-line dark:border-line-dark pt-5">
+          <span class="text-sm text-muted dark:text-muted-dark">Tiền đặt cọc</span>
+          <span class="font-display text-2xl font-extrabold text-brand-600 dark:text-blue-400">100.000.000 ₫</span>
         </div>
       </div>
     </section>
 
-    <!-- BUỔI 2 · Tiết 2 — DẢI KHÁCH HÀNG -->
-    <section aria-labelledby="doitac-title" class="border-y border-line bg-surface-alt py-10">
+    <!-- DẢI KHÁCH HÀNG -->
+    <section aria-labelledby="doitac-title" class="border-y border-line bg-surface-alt dark:bg-surface-alt-dark dark:border-line-dark py-8">
       <div class="mx-auto max-w-6xl px-5 text-center">
-        <h2 id="doitac-title" class="text-xs font-bold uppercase tracking-wider text-muted">Đang được dùng tại hơn 150+ Showroom Motor PKL trên toàn quốc</h2>
-        <ul class="mt-6 flex flex-wrap items-center justify-center gap-x-12 gap-y-6 font-bold text-slate-700">
-          <li>DUCATI HÀ NỘI</li>
-          <li>KAWASAKI MAX MOTOR</li>
-          <li>BMW MOTORRAD SAIGON</li>
-          <li>HARLEY-DAVIDSON VIETNAM</li>
-          <li>TRIUMPH EAST SAIGON</li>
+        <h2 id="doitac-title" class="text-xs font-bold uppercase tracking-wider text-muted dark:text-muted-dark">Đang được dùng tại 150+ Showroom Motor PKL</h2>
+        <ul class="mt-6 flex flex-wrap items-center justify-center gap-x-8 gap-y-4 font-bold text-sm sm:text-base">
+          <li>DUCATI HÀ NỘI</li><li>KAWASAKI MAX MOTOR</li><li>BMW MOTORRAD SAIGON</li><li>HARLEY-DAVIDSON VIETNAM</li>
         </ul>
       </div>
     </section>
 
-    <!-- BUỔI 2 · Tiết 2 — TÍNH NĂNG -->
-    <section id="tinh-nang" aria-labelledby="tinh-nang-title" class="mx-auto max-w-6xl px-5 py-20">
+    <!-- LƯỚI TÍNH NĂNG -->
+    <section id="tinh-nang" aria-labelledby="tinh-nang-title" class="section">
       <div class="text-center max-w-2xl mx-auto">
         <p class="eyebrow">Tính năng</p>
-        <h2 id="tinh-nang-title" class="font-display text-3xl font-bold mt-2">Ba công cụ cốt lõi cho Showroom Motor</h2>
-        <p class="text-muted mt-2">Thiết kế tối ưu theo quy trình bán hàng và dịch vụ xe phân khối lớn.</p>
+        <h2 id="tinh-nang-title" class="font-display text-2xl sm:text-3xl font-bold mt-2">Ba công cụ cốt lõi cho Showroom Motor</h2>
       </div>
-      <ul class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <ul class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         <li class="card">
-          <span class="grid h-11 w-11 place-items-center rounded-lg bg-brand-50 text-brand-600 mb-4">
-            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
-          </span>
           <h3 class="font-bold text-lg">Quản lý kho xe theo số VIN</h3>
-          <p class="text-muted text-sm mt-2">Theo dõi chi tiết số khung, màu sắc, giấy tờ hải quan và vị trí lưu kho của từng chiếc xe.</p>
+          <p class="text-muted dark:text-muted-dark text-sm mt-2">Theo dõi chi tiết số khung, màu sắc, giấy tờ hải quan của từng chiếc xe.</p>
         </li>
         <li class="card">
-          <span class="grid h-11 w-11 place-items-center rounded-lg bg-brand-50 text-brand-600 mb-4">
-            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-          </span>
           <h3 class="font-bold text-lg">Tự động hợp đồng & Trả góp</h3>
-          <p class="text-muted text-sm mt-2">In hợp đồng mua bán tự động, tính biểu phí trả góp ngân hàng chính xác cho khách hàng.</p>
+          <p class="text-muted dark:text-muted-dark text-sm mt-2">In hợp đồng mua bán tự động, tính biểu phí trả góp ngân hàng chính xác.</p>
         </li>
-        <li class="card">
-          <span class="grid h-11 w-11 place-items-center rounded-lg bg-brand-50 text-brand-600 mb-4">
-            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/></svg>
-          </span>
+        <li class="card sm:col-span-2 lg:col-span-1">
           <h3 class="font-bold text-lg">Lịch bảo dưỡng & Đồ độ</h3>
-          <p class="text-muted text-sm mt-2">Gửi tin nhắn nhắc lịch bảo dưỡng định kỳ tự động và quản lý kho phụ tùng chính hãng.</p>
+          <p class="text-muted dark:text-muted-dark text-sm mt-2">Gửi tin nhắn nhắc lịch bảo dưỡng định kỳ tự động qua Zalo/SMS.</p>
         </li>
       </ul>
-    </section>
-
-    <!-- CÁCH HOẠT ĐỘNG (BÀI TẬP VỀ NHÀ) -->
-    <section id="cach-hoat-dong" aria-labelledby="cach-title" class="mx-auto max-w-6xl px-5 py-20 border-t border-line">
-      <div class="text-center max-w-2xl mx-auto">
-        <p class="eyebrow">Cách hoạt động</p>
-        <h2 id="cach-title" class="font-display text-3xl font-bold mt-2">Chốt một đơn xe, ba thao tác</h2>
-      </div>
-      <ol class="mt-12 grid gap-6 md:grid-cols-3">
-        <li class="card">
-          <span class="font-display text-3xl font-extrabold text-brand-600">01</span>
-          <h3 class="font-bold text-lg mt-2">Chọn xe theo VIN</h3>
-          <p class="text-muted text-sm mt-1">Quét mã barcode hoặc chọn xe có sẵn trong kho hàng trực tuyến.</p>
-        </li>
-        <li class="card">
-          <span class="font-display text-3xl font-extrabold text-brand-600">02</span>
-          <h3 class="font-bold text-lg mt-2">Lập hợp đồng cọc</h3>
-          <p class="text-muted text-sm mt-1">Tự động điền thông tin khách hàng và in phiếu nhận cọc chỉ trong 1 phút.</p>
-        </li>
-        <li class="card">
-          <span class="font-display text-3xl font-extrabold text-brand-600">03</span>
-          <h3 class="font-bold text-lg mt-2">Bàn giao & Kích hoạt BH</h3>
-          <p class="text-muted text-sm mt-1">Lưu lịch sử bàn giao xe và kích hoạt chuỗi nhắc lịch bảo dưỡng tự động.</p>
-        </li>
-      </ol>
-    </section>
-
-    <!-- BUỔI 2 · Tiết 3 — SỐ LIỆU -->
-    <section aria-labelledby="solieu-title" class="bg-surface-alt border-y border-line py-16">
-      <h2 id="solieu-title" class="sr-only">Số liệu sử dụng</h2>
-      <div class="mx-auto max-w-6xl px-5">
-        <dl class="grid sm:grid-cols-3 gap-8 sm:divide-x sm:divide-line text-center">
-          <div class="flex flex-col items-center">
-            <dt class="order-2 mt-2 text-sm text-muted">Showroom đang sử dụng</dt>
-            <dd class="font-display text-4xl font-extrabold text-brand-600">150+</dd>
-          </div>
-          <div class="flex flex-col items-center">
-            <dt class="order-2 mt-2 text-sm text-muted">Hợp đồng xe tạo trong năm</dt>
-            <dd class="font-display text-4xl font-extrabold text-brand-600">18.000</dd>
-          </div>
-          <div class="flex flex-col items-center">
-            <dt class="order-2 mt-2 text-sm text-muted">Thời gian hoàn tất thủ tục bàn giao</dt>
-            <dd class="font-display text-4xl font-extrabold text-brand-600">5 phút</dd>
-          </div>
-        </dl>
-      </div>
-    </section>
-
-    <!-- BUỔI 2 · Tiết 3 — CẢM NHẬN -->
-    <section aria-labelledby="camnhan-title" class="mx-auto max-w-6xl px-5 py-20">
-      <h2 id="camnhan-title" class="font-display text-3xl font-bold text-center">Đánh giá từ các chủ Showroom</h2>
-      <ul class="mt-12 grid gap-6 lg:grid-cols-3">
-        <li>
-          <figure class="card h-full flex flex-col justify-between">
-            <blockquote class="text-muted text-sm italic">
-              "Trước đây kiểm kê kho 50 chiếc xe PKL mất cả buổi chiều vì phải dò từng số khung. Giờ quét app Mô-tôPro 15 phút là xong."
-            </blockquote>
-            <figcaption class="mt-6 border-t border-line pt-4">
-              <span class="block font-bold text-sm">Anh Hoàng Nam</span>
-              <cite class="not-italic text-xs text-muted">CEO Max Motor Hà Nội</cite>
-            </figcaption>
-          </figure>
-        </li>
-        <li>
-          <figure class="card h-full flex flex-col justify-between">
-            <blockquote class="text-muted text-sm italic">
-              "Khách mua xe đắt tiền rất coi trọng sự chuyên nghiệp. Hợp đồng in ra đẹp, lịch bảo dưỡng nhắc qua Zalo làm họ rất tin tưởng."
-            </blockquote>
-            <figcaption class="mt-6 border-t border-line pt-4">
-              <span class="block font-bold text-sm">Chị Minh Trang</span>
-              <cite class="not-italic text-xs text-muted">Quản lý Ducati Saigon</cite>
-            </figcaption>
-          </figure>
-        </li>
-        <li>
-          <figure class="card h-full flex flex-col justify-between">
-            <blockquote class="text-muted text-sm italic">
-              "Phần mềm dễ dùng, nhân viên bán hàng mới vào học 10 phút là lập được hợp đồng cọc xe cho khách."
-            </blockquote>
-            <figcaption class="mt-6 border-t border-line pt-4">
-              <span class="block font-bold text-sm">Anh Quốc Bảo</span>
-              <cite class="not-italic text-xs text-muted">Chủ chuỗi Bảo Motor</cite>
-            </figcaption>
-          </figure>
-        </li>
-      </ul>
-    </section>
-
-    <!-- BUỔI 2 · Tiết 4 — BẢNG GIÁ (3 THẺ CAO BẰNG NHAU) -->
-    <section id="bang-gia" aria-labelledby="gia-title" class="mx-auto max-w-6xl px-5 py-20 border-t border-line">
-      <div class="text-center max-w-2xl mx-auto">
-        <p class="eyebrow">Bảng giá</p>
-        <h2 id="gia-title" class="font-display text-3xl font-bold mt-2">Trả theo quy mô Showroom</h2>
-        <p class="text-muted mt-2">Linh hoạt nâng hạ gói dịch vụ theo mùa kinh doanh.</p>
-      </div>
-
-      <ul class="mt-12 grid items-stretch gap-6 lg:grid-cols-3">
-        <li class="card flex h-full flex-col">
-          <h3 class="font-bold text-xl">Showroom Nhỏ</h3>
-          <p class="text-muted text-sm mt-1">Dưới 15 xe trưng bày trong kho.</p>
-          <p class="font-display text-3xl font-extrabold my-4">490.000 ₫<span class="text-sm font-normal text-muted">/tháng</span></p>
-          <ul class="space-y-2 text-sm text-muted mb-8">
-            <li>✓ 3 tài khoản nhân viên</li>
-            <li>✓ Quản lý tối đa 20 xe</li>
-            <li>✓ In hợp đồng mua bán</li>
-          </ul>
-          <a href="#cta" class="btn btn-ghost border border-line mt-auto w-full">Chọn gói này</a>
-        </li>
-
-        <li class="card relative flex h-full flex-col ring-2 ring-brand-600">
-          <span class="badge absolute -top-3 left-6 bg-brand-600 text-white">Được chọn nhiều nhất</span>
-          <h3 class="font-bold text-xl">Showroom Vừa</h3>
-          <p class="text-muted text-sm mt-1">Từ 15 đến 50 xe, có dịch vụ bảo dưỡng.</p>
-          <p class="font-display text-3xl font-extrabold text-brand-600 my-4">1.290.000 ₫<span class="text-sm font-normal text-muted">/tháng</span></p>
-          <ul class="space-y-2 text-sm text-muted mb-8">
-            <li>✓ 10 tài khoản nhân viên</li>
-            <li>✓ Quản lý kho xe không giới hạn</li>
-            <li>✓ Tự động gửi nhắc lịch Zalo</li>
-            <li>✓ Quản lý kho phụ tùng & đồ độ</li>
-          </ul>
-          <a href="#cta" class="btn btn-primary mt-auto w-full">Chọn gói này</a>
-        </li>
-
-        <li class="card flex h-full flex-col">
-          <h3 class="font-bold text-xl">Chuỗi Showroom</h3>
-          <p class="text-muted text-sm mt-1">Nhiều chi nhánh toàn quốc.</p>
-          <p class="font-display text-3xl font-extrabold my-4">2.490.000 ₫<span class="text-sm font-normal text-muted">/tháng</span></p>
-          <ul class="space-y-2 text-sm text-muted mb-8">
-            <li>✓ Không giới hạn tài khoản</li>
-            <li>✓ Báo cáo doanh thu gộp chi nhánh</li>
-            <li>✓ Hỗ trợ kỹ thuật riêng tại showroom</li>
-          </ul>
-          <a href="#cta" class="btn btn-ghost border border-line mt-auto w-full">Liên hệ tư vấn</a>
-        </li>
-      </ul>
-    </section>
-
-    <!-- BUỔI 2 · Tiết 5 — FAQ -->
-    <section id="cau-hoi" aria-labelledby="faq-title" class="mx-auto max-w-6xl px-5 py-20 border-t border-line">
-      <div class="grid gap-12 lg:grid-cols-[1fr_1.4fr]">
-        <div>
-          <p class="eyebrow">Câu hỏi thường gặp</p>
-          <h2 id="faq-title" class="font-display text-3xl font-bold mt-2">Thắc mắc trước khi triển khai</h2>
-          <p class="text-muted mt-2">Đội ngũ hỗ trợ kỹ thuật của Mô-tôPro luôn sẵn sàng giải đáp 24/7.</p>
-        </div>
-        <div class="divide-y divide-line space-y-6">
-          <div class="pt-6 first:pt-0">
-            <h3 class="font-bold text-lg">Phần mềm có kết nối được với máy in hợp đồng không?</h3>
-            <p class="text-muted text-sm mt-1">Có, phần mềm hỗ trợ in trực tiếp ra các khổ giấy A4, A5 thông qua máy in văn phòng thông thường.</p>
-          </div>
-          <div class="pt-6">
-            <h3 class="font-bold text-lg">Dữ liệu xe và khách hàng có được bảo mật không?</h3>
-            <p class="text-muted text-sm mt-1">Dữ liệu được lưu trữ mã hóa trên đám mây, chỉ có tài khoản admin chính của showroom mới có quyền xuất dữ liệu.</p>
-          </div>
-          <div class="pt-6">
-            <h3 class="font-bold text-lg">Tôi có được hỗ trợ nhập dữ liệu xe cũ vào không?</h3>
-            <p class="text-muted text-sm mt-1">Đội ngũ Mô-tôPro hỗ trợ chuyển đổi file Excel danh sách xe và phụ tùng cũ vào hệ thống hoàn toàn miễn phí.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- BUỔI 2 · Tiết 5 — CTA -->
-    <section id="cta" aria-labelledby="cta-title" class="mx-auto max-w-6xl px-5 py-12">
-      <div class="rounded-card bg-brand-600 p-10 text-center text-white">
-        <h2 id="cta-title" class="font-display text-3xl font-extrabold">Chuẩn hóa vận hành Showroom ngay hôm nay</h2>
-        <p class="mt-2 text-white/80">Cài đặt chỉ mất 10 phút. Dùng thử 14 ngày không cần thẻ ngân hàng.</p>
-        <div class="mt-6 flex flex-wrap justify-center gap-4">
-          <a href="#" class="btn bg-white text-brand-600 hover:bg-slate-100">Bắt đầu dùng thử</a>
-          <a href="tel:+842873001234" class="btn border border-white/30 text-white hover:bg-white/10">Gọi 028 7300 1234</a>
-        </div>
-      </div>
     </section>
   </main>
 
-  <!-- FOOTER -->
-  <footer class="border-t border-line bg-surface-alt py-12 text-sm text-muted">
-    <div class="mx-auto max-w-6xl px-5 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-      <div>
-        <a href="./index.html" class="flex items-center gap-2 font-display text-lg font-extrabold text-ink">
-          <span class="grid h-7 w-7 place-items-center rounded bg-brand-600 text-white text-xs">M</span>
-          <span>Mô-tôPro</span>
-        </a>
-        <p class="mt-3 text-xs leading-relaxed">Phần mềm quản lý chuyên biệt cho các Showroom Xe Phân Khối Lớn tại Việt Nam.</p>
-      </div>
-
-      <nav aria-labelledby="footer-sp">
-        <h3 id="footer-sp" class="font-bold text-ink">Sản phẩm</h3>
-        <ul class="mt-3 space-y-2 text-xs">
-          <li><a href="#tinh-nang" class="hover:text-brand-600">Tính năng</a></li>
-          <li><a href="#bang-gia" class="hover:text-brand-600">Bảng giá</a></li>
-          <li><a href="#cach-hoat-dong" class="hover:text-brand-600">Cách hoạt động</a></li>
-        </ul>
-      </nav>
-
-      <nav aria-labelledby="footer-ht">
-        <h3 id="footer-ht" class="font-bold text-ink">Hỗ trợ</h3>
-        <ul class="mt-3 space-y-2 text-xs">
-          <li><a href="#cau-hoi" class="hover:text-brand-600">Câu hỏi thường gặp</a></li>
-          <li><a href="tel:+842873001234" class="hover:text-brand-600">028 7300 1234</a></li>
-          <li><a href="mailto:hotro@motopro.vn" class="hover:text-brand-600">hotro@motopro.vn</a></li>
-        </ul>
-      </nav>
-
-      <div>
-        <h3 class="font-bold text-ink">Địa chỉ</h3>
-        <address class="mt-3 text-xs not-italic leading-relaxed">
-          Trường Đại học Mở TP.HCM<br />
-          Khoa Công nghệ Thông tin
-        </address>
-      </div>
-    </div>
-    <div class="mx-auto max-w-6xl px-5 mt-8 pt-6 border-t border-line text-center text-xs">
+  <footer class="border-t border-line bg-surface-alt dark:bg-surface-alt-dark dark:border-line-dark py-10 text-sm text-muted dark:text-muted-dark">
+    <div class="mx-auto max-w-6xl px-5 text-center">
       <p>© 2026 Mô-tôPro. Bài thực hành môn Thiết kế Web — SV: Nguyễn Lâm Nhựt Nam (2551050146).</p>
     </div>
   </footer>
-
 </body>
 </html>

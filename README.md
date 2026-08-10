@@ -49,3 +49,10 @@ assets/             Ảnh và Icon SVG
 [x] Buổi 1: Trích xuất Design Tokens, dựng khung HTML Semantic 10 section, style Navbar & Hero (tag: buoi-1)
 
 [x] Buổi 2: Hệ thống Layout với Flexbox & Grid cho toàn bộ 10 section, responsive 1280px (tag: buoi-2)
+
+các Breakpoints:
+sm (Các thiết bị màn hình nhỏ / điện thoại xoay ngang ): 640px
+md (Tablets / Máy tính bảng): 780px
+lg (màn hình máy tính xách tay / laptop): 1824px
+xl (Màn hình máy tính lớn / Desktop): 1280px
+2xl (Màn hình độ phân giải cụ lớn): 
