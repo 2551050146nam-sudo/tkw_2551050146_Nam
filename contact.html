@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Liên hệ & Dùng thử — Mô-tôPro SaaS</title>
+  <link rel="stylesheet" href="./dist/output.css" />
+</head>
+<body class="bg-surface text-ink font-body antialiased transition-colors dark:bg-surface-dark dark:text-ink-dark">
+  <header class="sticky top-0 z-40 border-b border-line bg-surface/85 backdrop-blur dark:border-line-dark dark:bg-surface-dark/85">
+    <nav class="mx-auto flex max-w-6xl items-center justify-between px-5 py-4" aria-label="Điều hướng chính">
+      <a href="./index.html" class="flex items-center gap-2.5 font-display text-xl font-extrabold text-brand-600 dark:text-blue-400">Mô-tôPro</a>
+      <ul class="flex items-center gap-6 text-sm font-medium">
+        <li><a href="./index.html">Trang chủ</a></li>
+        <li><a href="./pricing.html">Bảng giá</a></li>
+        <li><a href="./contact.html" class="text-brand-600 dark:text-blue-400">Liên hệ</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="section max-w-2xl">
+    <p class="eyebrow">Đăng ký tư vấn</p>
+    <h1 class="mt-2 font-display text-3xl font-extrabold">Bắt đầu 14 ngày dùng thử miễn phí</h1>
+    <p class="mt-2 text-muted dark:text-muted-dark">Điền thông tin bên dưới, đội ngũ kỹ thuật sẽ hỗ trợ thiết lập kho xe mẫu trong 10 phút.</p>
+    
+    <form class="mt-8 space-y-5" action="#" method="POST">
+      <div>
+        <label class="field-label" for="ho-ten">
+          Họ và tên <span class="text-red-600" aria-hidden="true">*</span>
+        </label>
+        <input class="field-input" id="ho-ten" name="hoTen" type="text" required autocomplete="name" placeholder="Nguyễn Văn A" />
+      </div>
+
+      <div>
+        <label class="field-label" for="dien-thoai">
+          Số điện thoại <span class="text-red-600" aria-hidden="true">*</span>
+        </label>
+        <input class="field-input" id="dien-thoai" name="dienThoai" type="tel" required
+               pattern="0[0-9]{9}" autocomplete="tel" inputmode="numeric"
+               aria-describedby="dien-thoai-hint dien-thoai-error" />
+        <p class="mt-1.5 text-xs text-muted dark:text-muted-dark" id="dien-thoai-hint">
+          Chúng tôi gọi qua số này, không nhắn tin quảng cáo.
+        </p>
+        <p class="field-error" id="dien-thoai-error" role="alert"></p>
+      </div>
+
+      <div>
+        <label class="field-label" for="email">
+          Email công việc <span class="text-red-600" aria-hidden="true">*</span>
+        </label>
+        <input class="field-input" id="email" name="email" type="email" required autocomplete="email" />
+      </div>
+
+      <div>
+        <label class="field-label" for="quy-mo">Quy mô Showroom</label>
+        <select class="field-input" id="quy-mo" name="quyMo">
+          <option value="nho">Dưới 15 xe PKL</option>
+          <option value="vua">15 - 50 xe PKL</option>
+          <option value="lon">Trên 50 xe (Chuỗi Showroom)</option>
+        </select>
+      </div>
+
+      <div>
+        <label class="field-label" for="ghi-chu">Ghi chú thêm</label>
+        <textarea class="field-input h-24" id="ghi-chu" name="ghiChu"></textarea>
+      </div>
+
+      <div class="flex items-start gap-2 pt-2">
+        <input class="mt-1 h-4 w-4 rounded border-line text-brand-600 focus:ring-brand-600" id="dong-y" name="dongY" type="checkbox" required />
+        <label class="text-sm text-muted dark:text-muted-dark" for="dong-y">
+          Tôi đồng ý nhận hỗ trợ kỹ thuật cài đặt phần mềm qua điện thoại hoặc Zalo.
+        </label>
+      </div>
+
+      <button type="submit" class="btn btn-primary btn-lg w-full">Đăng ký dùng thử ngay</button>
+    </form>
+  </main>
+</body>
+</html>

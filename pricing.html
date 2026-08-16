@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bảng giá — Mô-tôPro SaaS</title>
+  <link rel="stylesheet" href="./dist/output.css" />
+</head>
+<body class="bg-surface text-ink font-body antialiased transition-colors dark:bg-surface-dark dark:text-ink-dark">
+  <header class="sticky top-0 z-40 border-b border-line bg-surface/85 backdrop-blur dark:border-line-dark dark:bg-surface-dark/85">
+    <nav class="mx-auto flex max-w-6xl items-center justify-between px-5 py-4" aria-label="Điều hướng chính">
+      <a href="./index.html" class="flex items-center gap-2.5 font-display text-xl font-extrabold text-brand-600 dark:text-blue-400">Mô-tôPro</a>
+      <ul class="flex items-center gap-6 text-sm font-medium">
+        <li><a href="./index.html">Trang chủ</a></li>
+        <li><a href="./pricing.html" class="text-brand-600 dark:text-blue-400">Bảng giá</a></li>
+        <li><a href="./contact.html">Liên hệ</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="section">
+    <div class="mx-auto max-w-2xl text-center">
+      <p class="eyebrow">Bảng giá dịch vụ</p>
+      <h1 class="mt-2 font-display text-3xl font-extrabold sm:text-4xl">Chọn gói phù hợp với Showroom</h1>
+      <p class="mt-2 text-muted dark:text-muted-dark">Linh hoạt nâng hạ gói dịch vụ theo mùa kinh doanh.</p>
+    </div>
+
+    <ul class="mt-12 grid items-stretch gap-6 lg:grid-cols-3">
+      <li class="card flex h-full flex-col">
+        <h3 class="text-xl font-bold">Showroom Nhỏ</h3>
+        <p class="mt-1 text-sm text-muted dark:text-muted-dark">Dưới 15 xe trưng bày trong kho.</p>
+        <p class="my-4 font-display text-3xl font-extrabold">490.000 ₫<span class="text-sm font-normal text-muted dark:text-muted-dark">/tháng</span></p>
+        <ul class="mb-8 space-y-2 text-sm text-muted dark:text-muted-dark">
+          <li>✓ 3 tài khoản nhân viên</li>
+          <li>✓ Quản lý tối đa 20 xe</li>
+        </ul>
+        <a href="./contact.html" class="btn btn-ghost mt-auto w-full">Chọn gói này</a>
+      </li>
+
+      <li class="card relative flex h-full flex-col ring-2 ring-brand-600">
+        <span class="badge absolute -top-3 left-6 bg-brand-600 text-white">Được chọn nhiều nhất</span>
+        <h3 class="text-xl font-bold">Showroom Vừa</h3>
+        <p class="mt-1 text-sm text-muted dark:text-muted-dark">Từ 15 đến 50 xe có xưởng dịch vụ.</p>
+        <p class="my-4 font-display text-3xl font-extrabold text-brand-600 dark:text-blue-400">1.290.000 ₫<span class="text-sm font-normal text-muted dark:text-muted-dark">/tháng</span></p>
+        <ul class="mb-8 space-y-2 text-sm text-muted dark:text-muted-dark">
+          <li>✓ 10 tài khoản nhân viên</li>
+          <li>✓ Không giới hạn xe</li>
+          <li>✓ Nhắc lịch Zalo tự động</li>
+        </ul>
+        <a href="./contact.html" class="btn btn-primary mt-auto w-full">Chọn gói này</a>
+      </li>
+
+      <li class="card flex h-full flex-col">
+        <h3 class="text-xl font-bold">Chuỗi Showroom</h3>
+        <p class="mt-1 text-sm text-muted dark:text-muted-dark">Nhiều chi nhánh trên cả nước.</p>
+        <p class="my-4 font-display text-3xl font-extrabold">2.490.000 ₫<span class="text-sm font-normal text-muted dark:text-muted-dark">/tháng</span></p>
+        <ul class="mb-8 space-y-2 text-sm text-muted dark:text-muted-dark">
+          <li>✓ Không giới hạn tài khoản</li>
+          <li>✓ Báo cáo gộp chuỗi</li>
+        </ul>
+        <a href="./contact.html" class="btn btn-ghost mt-auto w-full">Liên hệ tư vấn</a>
+      </li>
+    </ul>
+
+    <div class="mt-16">
+      <h2 class="mb-2 font-display text-xl font-bold">So sánh chi tiết tính năng</h2>
+      <p class="mb-3 text-sm text-muted lg:hidden dark:text-muted-dark">Vuốt ngang để xem hết bảng.</p>
+      
+      <div class="overflow-x-auto rounded-card border border-line dark:border-line-dark">
+        <table class="w-full min-w-[720px] text-left text-sm">
+          <thead class="border-b border-line bg-surface-alt dark:border-line-dark dark:bg-surface-alt-dark">
+            <tr>
+              <th class="p-4 font-bold">Tính năng</th>
+              <th class="p-4 text-center font-bold">Gói Nhỏ</th>
+              <th class="p-4 text-center font-bold text-brand-600 dark:text-blue-400">Gói Vừa</th>
+              <th class="p-4 text-center font-bold">Chuỗi Kho</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-line dark:divide-line-dark">
+            <tr><td class="p-4">Quản lý xe theo VIN</td><td class="p-4 text-center">Tối đa 20 xe</td><td class="p-4 text-center font-bold">Không giới hạn</td><td class="p-4 text-center">Không giới hạn</td></tr>
+            <tr><td class="p-4">In hợp đồng mua bán</td><td class="p-4 text-center">Có</td><td class="p-4 text-center">Có</td><td class="p-4 text-center">Có</td></tr>
+            <tr><td class="p-4">Nhắc bảo dưỡng Zalo</td><td class="p-4 text-center text-muted dark:text-muted-dark">-</td><td class="p-4 text-center font-bold text-brand-600 dark:text-blue-400">Có</td><td class="p-4 text-center">Có</td></tr>
+            <tr><td class="p-4">Báo cáo doanh thu đa kho</td><td class="p-4 text-center text-muted dark:text-muted-dark">-</td><td class="p-4 text-center text-muted dark:text-muted-dark">-</td><td class="p-4 text-center">Có</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
