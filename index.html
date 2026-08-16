@@ -10,7 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="./dist/output.css" />
 </head>
-<body class="bg-surface text-ink font-body antialiased dark:bg-surface-dark dark:text-ink-dark transition-colors">
+<body class="bg-surface text-ink font-body antialiased transition-colors dark:bg-surface-dark dark:text-ink-dark">
 
   <a href="#main" class="btn btn-primary sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50">Bỏ qua đến nội dung chính</a>
 
@@ -35,12 +35,11 @@
   </header>
 
   <main id="main">
-    <!-- HERO SECTION Mobile-first -->
     <section class="section grid items-center gap-10 lg:grid-cols-2 lg:gap-16" aria-labelledby="hero-title">
       <div>
         <p class="eyebrow">Giải pháp SaaS cho Showroom PKL</p>
-        <h1 id="hero-title" class="mt-4 font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight">Quản kho chính xác.<br />Chốt xe trong 5 phút.</h1>
-        <p class="mt-4 text-base sm:text-lg text-muted dark:text-muted-dark">Mô-tôPro thay thế sổ sách thủ công bằng hệ thống quản lý số khung VIN trên điện thoại. Kiểm soát tồn kho, lập hợp đồng trả góp tự động.</p>
+        <h1 id="hero-title" class="mt-4 font-display text-3xl font-extrabold leading-tight sm:text-4xl lg:text-5xl">Quản kho chính xác.<br />Chốt xe trong 5 phút.</h1>
+        <p class="mt-4 text-base text-muted sm:text-lg dark:text-muted-dark">Mô-tôPro thay thế sổ sách thủ công bằng hệ thống quản lý số khung VIN trên điện thoại. Kiểm soát tồn kho, lập hợp đồng trả góp tự động.</p>
         <div class="mt-6 flex flex-wrap gap-3">
           <a href="./contact.html" class="btn btn-primary btn-lg w-full sm:w-auto">Dùng thử 14 ngày</a>
           <a href="./pricing.html" class="btn btn-ghost btn-lg w-full sm:w-auto">Xem bảng giá</a>
@@ -51,51 +50,49 @@
           <div><p class="text-xs font-semibold uppercase tracking-widest text-muted dark:text-muted-dark">Phiếu đặt cọc xe</p><p class="font-display text-lg font-bold">HD-2026-889</p></div>
           <span class="badge bg-brand-50 text-brand-700 dark:bg-blue-950 dark:text-blue-300">Đã cọc</span>
         </div>
-        <dl class="mt-6 space-y-3 border-t border-dashed border-line dark:border-line-dark pt-5 text-sm">
+        <dl class="mt-6 space-y-3 border-t border-dashed border-line pt-5 text-sm dark:border-line-dark">
           <div class="flex justify-between"><dt class="text-muted dark:text-muted-dark">Khách hàng</dt><dd class="font-medium">Anh Tuấn</dd></div>
           <div class="flex justify-between"><dt class="text-muted dark:text-muted-dark">Mẫu xe / VIN</dt><dd class="font-medium">Ducati Panigale V4 S</dd></div>
         </dl>
-        <div class="mt-5 flex items-end justify-between border-t border-dashed border-line dark:border-line-dark pt-5">
+        <div class="mt-5 flex items-end justify-between border-t border-dashed border-line pt-5 dark:border-line-dark">
           <span class="text-sm text-muted dark:text-muted-dark">Tiền đặt cọc</span>
           <span class="font-display text-2xl font-extrabold text-brand-600 dark:text-blue-400">100.000.000 ₫</span>
         </div>
       </div>
     </section>
 
-    <!-- DẢI KHÁCH HÀNG -->
-    <section aria-labelledby="doitac-title" class="border-y border-line bg-surface-alt dark:bg-surface-alt-dark dark:border-line-dark py-8">
+    <section aria-labelledby="doitac-title" class="border-y border-line bg-surface-alt py-8 dark:border-line-dark dark:bg-surface-alt-dark">
       <div class="mx-auto max-w-6xl px-5 text-center">
         <h2 id="doitac-title" class="text-xs font-bold uppercase tracking-wider text-muted dark:text-muted-dark">Đang được dùng tại 150+ Showroom Motor PKL</h2>
-        <ul class="mt-6 flex flex-wrap items-center justify-center gap-x-8 gap-y-4 font-bold text-sm sm:text-base">
+        <ul class="mt-6 flex flex-wrap items-center justify-center gap-x-8 gap-y-4 text-sm font-bold sm:text-base">
           <li>DUCATI HÀ NỘI</li><li>KAWASAKI MAX MOTOR</li><li>BMW MOTORRAD SAIGON</li><li>HARLEY-DAVIDSON VIETNAM</li>
         </ul>
       </div>
     </section>
 
-    <!-- LƯỚI TÍNH NĂNG -->
     <section id="tinh-nang" aria-labelledby="tinh-nang-title" class="section">
-      <div class="text-center max-w-2xl mx-auto">
+      <div class="mx-auto max-w-2xl text-center">
         <p class="eyebrow">Tính năng</p>
-        <h2 id="tinh-nang-title" class="font-display text-2xl sm:text-3xl font-bold mt-2">Ba công cụ cốt lõi cho Showroom Motor</h2>
+        <h2 id="tinh-nang-title" class="mt-2 font-display text-2xl font-bold sm:text-3xl">Ba công cụ cốt lõi cho Showroom Motor</h2>
       </div>
       <ul class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         <li class="card">
-          <h3 class="font-bold text-lg">Quản lý kho xe theo số VIN</h3>
-          <p class="text-muted dark:text-muted-dark text-sm mt-2">Theo dõi chi tiết số khung, màu sắc, giấy tờ hải quan của từng chiếc xe.</p>
+          <h3 class="text-lg font-bold">Quản lý kho xe theo số VIN</h3>
+          <p class="mt-2 text-sm text-muted dark:text-muted-dark">Theo dõi chi tiết số khung, màu sắc, giấy tờ hải quan của từng chiếc xe.</p>
         </li>
         <li class="card">
-          <h3 class="font-bold text-lg">Tự động hợp đồng & Trả góp</h3>
-          <p class="text-muted dark:text-muted-dark text-sm mt-2">In hợp đồng mua bán tự động, tính biểu phí trả góp ngân hàng chính xác.</p>
+          <h3 class="text-lg font-bold">Tự động hợp đồng & Trả góp</h3>
+          <p class="mt-2 text-sm text-muted dark:text-muted-dark">In hợp đồng mua bán tự động, tính biểu phí trả góp ngân hàng chính xác.</p>
         </li>
         <li class="card sm:col-span-2 lg:col-span-1">
-          <h3 class="font-bold text-lg">Lịch bảo dưỡng & Đồ độ</h3>
-          <p class="text-muted dark:text-muted-dark text-sm mt-2">Gửi tin nhắn nhắc lịch bảo dưỡng định kỳ tự động qua Zalo/SMS.</p>
+          <h3 class="text-lg font-bold">Lịch bảo dưỡng & Đồ độ</h3>
+          <p class="mt-2 text-sm text-muted dark:text-muted-dark">Gửi tin nhắn nhắc lịch bảo dưỡng định kỳ tự động qua Zalo/SMS.</p>
         </li>
       </ul>
     </section>
   </main>
 
-  <footer class="border-t border-line bg-surface-alt dark:bg-surface-alt-dark dark:border-line-dark py-10 text-sm text-muted dark:text-muted-dark">
+  <footer class="border-t border-line bg-surface-alt py-10 text-sm text-muted dark:border-line-dark dark:bg-surface-alt-dark dark:text-muted-dark">
     <div class="mx-auto max-w-6xl px-5 text-center">
       <p>© 2026 Mô-tôPro. Bài thực hành môn Thiết kế Web — SV: Nguyễn Lâm Nhựt Nam (2551050146).</p>
     </div>
