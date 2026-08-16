@@ -9,14 +9,14 @@
   
   --color-accent-500: #eab308;
   
-  /* Cặp màu Light Mode */
+  /* Light Mode Tokens */
   --color-ink: #0f172a;
   --color-muted: #64748b;
   --color-surface: #ffffff;
   --color-surface-alt: #f8fafc;
   --color-line: #e2e8f0;
 
-  /* Cặp màu Dark Mode (Ngả tông dịu, không dùng #000 và #fff lóa mắt) */
+  /* Dark Mode Tokens */
   --color-ink-dark: #f1f5f9;
   --color-muted-dark: #94a3b8;
   --color-surface-dark: #0f172a;
@@ -30,7 +30,7 @@
   --radius-pill: 9999px;
 }
 
-/* Base Component Rules - Trích xuất 8-10 component dùng chung */
+/* 8-10 Reusable Components */
 @layer components {
   .section {
     @apply mx-auto w-full max-w-6xl px-5 py-12 lg:py-20;
@@ -42,7 +42,7 @@
     @apply bg-brand-600 text-white hover:bg-brand-700 dark:bg-brand-600 dark:hover:bg-brand-700;
   }
   .btn-ghost {
-    @apply bg-transparent text-ink hover:bg-surface-alt dark:text-ink-dark dark:hover:bg-surface-alt-dark border border-line dark:border-line-dark;
+    @apply border border-line bg-transparent text-ink hover:bg-surface-alt dark:border-line-dark dark:text-ink-dark dark:hover:bg-surface-alt-dark;
   }
   .btn-lg {
     @apply px-6 py-3 text-base;
@@ -59,19 +59,13 @@
   .ticket {
     @apply relative rounded-card border border-line bg-surface p-6 shadow-md dark:border-line-dark dark:bg-surface-alt-dark;
   }
-  /* Form Component Rules */
   .field-label {
-    @apply block text-sm font-medium text-ink dark:text-ink-dark mb-1.5;
+    @apply mb-1.5 block text-sm font-medium text-ink dark:text-ink-dark;
   }
   .field-input {
     @apply w-full rounded-lg border border-line bg-surface px-4 py-2.5 text-sm text-ink outline-none transition-all focus:border-brand-600 focus:ring-2 focus:ring-brand-600/20 dark:border-line-dark dark:bg-surface-dark dark:text-ink-dark dark:focus:border-blue-400;
   }
-} 
-/* Ép kích thước cố định cho logo khách hàng*/
-.brand-logo-img {
-  height: 100px !important;
-  width: auto !important;
-  max-width: 120px !important;
-  object-fit: contain !important;
-  display: inline-block !important;
+  .field-error {
+    @apply mt-1 text-xs text-red-600 dark:text-red-400;
+  }
 }
