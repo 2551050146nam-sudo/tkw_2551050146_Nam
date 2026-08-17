@@ -5,37 +5,69 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mô-tôPro — Phần mềm quản lý Showroom Motor PKL</title>
   <meta name="description" content="Mô-tôPro giúp chủ showroom quản lý kho xe theo mã VIN, lập hợp đồng mua bán và theo dõi lịch bảo dưỡng." />
+  
+  <!-- Script inline chống nháy trắng Dark Mode -->
+  <script>
+    (function () {
+      const saved = localStorage.getItem("theme");
+      const dark = saved ? saved === "dark" : window.matchMedia("(prefers-color-scheme: dark)").matches;
+      document.documentElement.classList.toggle("dark", dark);
+    })();
+  </script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="./dist/output.css" />
 </head>
 <body class="bg-surface text-ink font-body antialiased transition-colors dark:bg-surface-dark dark:text-ink-dark">
+  <div id="nav-sentinel" class="h-0 w-full"></div>
 
   <a href="#main" class="btn btn-primary sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50">Bỏ qua đến nội dung chính</a>
 
-  <header class="sticky top-0 z-40 border-b border-line bg-surface/85 backdrop-blur dark:border-line-dark dark:bg-surface-dark/85">
+  <header class="sticky top-0 z-40 border-b border-line bg-surface/85 backdrop-blur dark:border-line-dark dark:bg-surface-dark/85 transition-shadow">
     <nav class="mx-auto flex max-w-6xl items-center justify-between px-5 py-4" aria-label="Điều hướng chính">
       <a href="./index.html" class="flex items-center gap-2.5">
         <span class="grid h-9 w-9 place-items-center rounded-lg bg-brand-600 font-display text-lg font-extrabold text-white">M</span>
         <span class="font-display text-xl font-extrabold">Mô-tôPro</span>
       </a>
+
       <ul class="hidden items-center gap-8 text-sm font-medium lg:flex">
         <li><a href="./index.html#tinh-nang" class="hover:text-brand-600 dark:hover:text-blue-400">Tính năng</a></li>
-        <li><a href="./pricing.html" class="hover:text-brand-600 dark:hover:text-blue-400">Bảng giá & So sánh</a></li>
+        <li><a href="./pricing.html" class="hover:text-brand-600 dark:hover:text-blue-400">Bảng giá</a></li>
         <li><a href="./contact.html" class="hover:text-brand-600 dark:hover:text-blue-400">Liên hệ</a></li>
       </ul>
-      <div class="flex items-center gap-2">
+
+      <div class="flex items-center gap-3">
+        <!-- Nút bật/tắt Dark Mode -->
+        <button id="theme-toggle" type="button" role="switch" aria-checked="false" aria-label="Chuyển đổi giao diện sáng tối" class="grid h-10 w-10 place-items-center rounded-pill border border-line dark:border-line-dark hover:bg-surface-alt dark:hover:bg-surface-alt-dark">
+          <svg class="h-5 w-5 dark:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
+          <svg class="h-5 w-5 hidden dark:block text-yellow-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 9h-1m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+        </button>
+
         <a href="./contact.html" class="btn btn-primary hidden lg:inline-flex">Dùng thử 14 ngày</a>
-        <button type="button" class="grid h-10 w-10 place-items-center rounded-pill border border-line lg:hidden dark:border-line-dark" aria-expanded="false" aria-label="Mở menu">
+
+        <!-- Nút Hamburger Mobile -->
+        <button id="nav-toggle" type="button" class="grid h-10 w-10 place-items-center rounded-pill border border-line lg:hidden dark:border-line-dark" aria-expanded="false" aria-controls="nav-mobile" aria-label="Mở menu">
           <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" /></svg>
         </button>
       </div>
     </nav>
+
+    <!-- Menu Mobile Dropdown -->
+    <div id="nav-mobile" class="hidden border-t border-line px-5 pb-6 pt-4 lg:hidden dark:border-line-dark">
+      <ul class="flex flex-col gap-2 text-base font-medium">
+        <li><a href="./index.html#tinh-nang" class="block rounded-lg px-3 py-2 hover:bg-surface-alt dark:hover:bg-surface-alt-dark">Tính năng</a></li>
+        <li><a href="./pricing.html" class="block rounded-lg px-3 py-2 hover:bg-surface-alt dark:hover:bg-surface-alt-dark">Bảng giá</a></li>
+        <li><a href="./contact.html" class="block rounded-lg px-3 py-2 hover:bg-surface-alt dark:hover:bg-surface-alt-dark">Liên hệ</a></li>
+      </ul>
+      <a href="./contact.html" class="btn btn-primary btn-lg mt-4 w-full">Dùng thử 14 ngày</a>
+    </div>
   </header>
 
   <main id="main">
-    <section class="section grid items-center gap-10 lg:grid-cols-2 lg:gap-16" aria-labelledby="hero-title">
+    <!-- HERO -->
+    <section class="section grid items-center gap-10 lg:grid-cols-2 lg:gap-16" aria-labelledby="hero-title" data-reveal>
       <div>
         <p class="eyebrow">Giải pháp SaaS cho Showroom PKL</p>
         <h1 id="hero-title" class="mt-4 font-display text-3xl font-extrabold leading-tight sm:text-4xl lg:text-5xl">Quản kho chính xác.<br />Chốt xe trong 5 phút.</h1>
@@ -61,41 +93,95 @@
       </div>
     </section>
 
-    <section aria-labelledby="doitac-title" class="border-y border-line bg-surface-alt py-8 dark:border-line-dark dark:bg-surface-alt-dark">
-      <div class="mx-auto max-w-6xl px-5 text-center">
-        <h2 id="doitac-title" class="text-xs font-bold uppercase tracking-wider text-muted dark:text-muted-dark">Đang được dùng tại 150+ Showroom Motor PKL</h2>
-        <ul class="mt-6 flex flex-wrap items-center justify-center gap-x-8 gap-y-4 text-sm font-bold sm:text-base">
-          <li>DUCATI HÀ NỘI</li><li>KAWASAKI MAX MOTOR</li><li>BMW MOTORRAD SAIGON</li><li>HARLEY-DAVIDSON VIETNAM</li>
-        </ul>
-      </div>
-    </section>
-
-    <section id="tinh-nang" aria-labelledby="tinh-nang-title" class="section">
+    <!-- TÍNH NĂNG -->
+    <section id="tinh-nang" aria-labelledby="tinh-nang-title" class="section" data-reveal>
       <div class="mx-auto max-w-2xl text-center">
         <p class="eyebrow">Tính năng</p>
         <h2 id="tinh-nang-title" class="mt-2 font-display text-2xl font-bold sm:text-3xl">Ba công cụ cốt lõi cho Showroom Motor</h2>
       </div>
       <ul class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        <li class="card">
-          <h3 class="text-lg font-bold">Quản lý kho xe theo số VIN</h3>
-          <p class="mt-2 text-sm text-muted dark:text-muted-dark">Theo dõi chi tiết số khung, màu sắc, giấy tờ hải quan của từng chiếc xe.</p>
-        </li>
-        <li class="card">
-          <h3 class="text-lg font-bold">Tự động hợp đồng & Trả góp</h3>
-          <p class="mt-2 text-sm text-muted dark:text-muted-dark">In hợp đồng mua bán tự động, tính biểu phí trả góp ngân hàng chính xác.</p>
-        </li>
-        <li class="card sm:col-span-2 lg:col-span-1">
-          <h3 class="text-lg font-bold">Lịch bảo dưỡng & Đồ độ</h3>
-          <p class="mt-2 text-sm text-muted dark:text-muted-dark">Gửi tin nhắn nhắc lịch bảo dưỡng định kỳ tự động qua Zalo/SMS.</p>
-        </li>
+        <li class="card"><h3 class="text-lg font-bold">Quản lý kho xe theo số VIN</h3><p class="mt-2 text-sm text-muted dark:text-muted-dark">Theo dõi chi tiết số khung, màu sắc, giấy tờ hải quan của từng chiếc xe.</p></li>
+        <li class="card"><h3 class="text-lg font-bold">Tự động hợp đồng & Trả góp</h3><p class="mt-2 text-sm text-muted dark:text-muted-dark">In hợp đồng mua bán tự động, tính biểu phí trả góp ngân hàng chính xác.</p></li>
+        <li class="card sm:col-span-2 lg:col-span-1"><h3 class="text-lg font-bold">Lịch bảo dưỡng & Đồ độ</h3><p class="mt-2 text-sm text-muted dark:text-muted-dark">Gửi tin nhắn nhắc lịch bảo dưỡng định kỳ tự động qua Zalo/SMS.</p></li>
       </ul>
     </section>
+
+    <!-- SLIDER CẢM NHẬN VIẾT TAY -->
+    <section id="testimonial-slider" class="section overflow-hidden" aria-labelledby="slider-title" data-reveal>
+      <div class="mx-auto max-w-2xl text-center mb-8">
+        <p class="eyebrow">Đánh giá khách hàng</p>
+        <h2 id="slider-title" class="mt-2 font-display text-2xl font-bold sm:text-3xl">Chủ Showroom nói gì về Mô-tôPro</h2>
+      </div>
+
+      <div class="relative max-w-3xl mx-auto">
+        <div class="overflow-hidden rounded-card">
+          <div data-slider-track class="flex transition-transform duration-500 ease-out">
+            <div data-slide class="w-full flex-shrink-0 px-4">
+              <figure class="card text-center p-8">
+                <blockquote class="text-lg italic text-muted dark:text-muted-dark">"Quản lý kho 50 chiếc xe PKL từng mất cả ngày để dò số khung, giờ quét app Mô-tôPro chỉ mất 15 phút."</blockquote>
+                <figcaption class="mt-6 font-bold text-sm">Anh Hoàng Nam — <cite class="font-normal not-italic text-muted dark:text-muted-dark">CEO Max Motor Hà Nội</cite></figcaption>
+              </figure>
+            </div>
+            <div data-slide class="w-full flex-shrink-0 px-4" inert>
+              <figure class="card text-center p-8">
+                <blockquote class="text-lg italic text-muted dark:text-muted-dark">"Hợp đồng in tự động, khách đặt cọc nhận ngay phiếu xác nhận qua Zalo cực kỳ chuyên nghiệp."</blockquote>
+                <figcaption class="mt-6 font-bold text-sm">Chị Minh Trang — <cite class="font-normal not-italic text-muted dark:text-muted-dark">Quản lý Ducati Saigon</cite></figcaption>
+              </figure>
+            </div>
+            <div data-slide class="w-full flex-shrink-0 px-4" inert>
+              <figure class="card text-center p-8">
+                <blockquote class="text-lg italic text-muted dark:text-muted-dark">"Hệ thống nhắc bảo dưỡng định kỳ tự động giúp showroom tăng 35% doanh thu phụ tùng và đồ chơi xe."</blockquote>
+                <figcaption class="mt-6 font-bold text-sm">Anh Quốc Bảo — <cite class="font-normal not-italic text-muted dark:text-muted-dark">Chủ chuỗi Bảo Motor</cite></figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex items-center justify-between mt-6">
+          <button data-slider-prev type="button" class="btn btn-ghost h-10 w-10 rounded-pill p-0" aria-label="Slide trước">❮</button>
+          <div data-slider-dots class="flex items-center gap-2"></div>
+          <button data-slider-next type="button" class="btn btn-ghost h-10 w-10 rounded-pill p-0" aria-label="Slide tiếp theo">❯</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ACCORDION FAQ -->
+    <section class="section border-t border-line dark:border-line-dark" aria-labelledby="faq-title" data-reveal>
+      <div class="mx-auto max-w-2xl text-center mb-8">
+        <p class="eyebrow">Câu hỏi thường gặp</p>
+        <h2 id="faq-title" class="mt-2 font-display text-2xl font-bold sm:text-3xl">Giải đáp thắc mắc</h2>
+      </div>
+
+      <div id="faq-list" class="max-w-2xl mx-auto space-y-4">
+        <div class="card p-0 overflow-hidden">
+          <button data-faq-trigger aria-expanded="false" aria-controls="faq-ans-1" class="w-full flex items-center justify-between p-5 text-left font-bold text-base focus:outline-none">
+            <span>Phần mềm có in hợp đồng mua bán tự động được không?</span>
+            <svg class="h-5 w-5 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div id="faq-ans-1" class="hidden px-5 pb-5 text-sm text-muted dark:text-muted-dark">Có, phần mềm hỗ trợ xuất file in PDF theo mẫu chuẩn của Bộ GTVT hoặc tùy chỉnh theo mẫu riêng của showroom.</div>
+        </div>
+
+        <div class="card p-0 overflow-hidden">
+          <button data-faq-trigger aria-expanded="false" aria-controls="faq-ans-2" class="w-full flex items-center justify-between p-5 text-left font-bold text-base focus:outline-none">
+            <span>Dữ liệu xe có được bảo mật khi lưu trên đám mây?</span>
+            <svg class="h-5 w-5 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div id="faq-ans-2" class="hidden px-5 pb-5 text-sm text-muted dark:text-muted-dark">Dữ liệu được mã hóa chuẩn SSL 256-bit và sao lưu tự động mỗi ngày, chỉ tài khoản Admin mới có quyền truy cập.</div>
+        </div>
+      </div>
+    </section>
   </main>
+
+  <button id="back-to-top" type="button" aria-label="Lên đầu trang" class="hidden fixed bottom-6 right-6 z-50 grid h-11 w-11 place-items-center rounded-pill bg-brand-600 text-white shadow-lg transition-all hover:bg-brand-700">
+    ▲
+  </button>
 
   <footer class="border-t border-line bg-surface-alt py-10 text-sm text-muted dark:border-line-dark dark:bg-surface-alt-dark dark:text-muted-dark">
     <div class="mx-auto max-w-6xl px-5 text-center">
       <p>© 2026 Mô-tôPro. Bài thực hành môn Thiết kế Web — SV: Nguyễn Lâm Nhựt Nam (2551050146).</p>
     </div>
   </footer>
+
+  <script type="module" src="./js/main.js"></script>
 </body>
 </html>

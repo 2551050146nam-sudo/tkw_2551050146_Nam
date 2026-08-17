@@ -4,6 +4,15 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Liên hệ & Dùng thử — Mô-tôPro SaaS</title>
+  
+  <script>
+    (function () {
+      const saved = localStorage.getItem("theme");
+      const dark = saved ? saved === "dark" : window.matchMedia("(prefers-color-scheme: dark)").matches;
+      document.documentElement.classList.toggle("dark", dark);
+    })();
+  </script>
+
   <link rel="stylesheet" href="./dist/output.css" />
 </head>
 <body class="bg-surface text-ink font-body antialiased transition-colors dark:bg-surface-dark dark:text-ink-dark">
@@ -18,7 +27,7 @@
     </nav>
   </header>
 
-  <main class="section max-w-2xl">
+  <main class="section max-w-2xl" data-reveal>
     <p class="eyebrow">Đăng ký tư vấn</p>
     <h1 class="mt-2 font-display text-3xl font-extrabold">Bắt đầu 14 ngày dùng thử miễn phí</h1>
     <p class="mt-2 text-muted dark:text-muted-dark">Điền thông tin bên dưới, đội ngũ kỹ thuật sẽ hỗ trợ thiết lập kho xe mẫu trong 10 phút.</p>
@@ -75,5 +84,7 @@
       <button type="submit" class="btn btn-primary btn-lg w-full">Đăng ký dùng thử ngay</button>
     </form>
   </main>
+
+  <script type="module" src="./js/main.js"></script>
 </body>
 </html>
