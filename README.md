@@ -45,7 +45,7 @@ assets/             Ảnh và Icon SVG
 
 ---
 
-4. Tiến độ hoàn thành
+4. Tiến độ hoàn thành   
 [x] Buổi 1: Trích xuất Design Tokens, dựng khung HTML Semantic 10 section, style Navbar & Hero (tag: buoi-1)
 
 [x] Buổi 2: Hệ thống Layout với Flexbox & Grid cho toàn bộ 10 section, responsive 1280px (tag: buoi-2)
